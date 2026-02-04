@@ -4,7 +4,8 @@ const Navbar = ({ activeTab, setActiveTab }) => {
   const menuItems = [
     { id: 'formacion', label: 'Formación', icon: '🎓' },
     { id: 'experiencia', label: 'Experiencia', icon: '💼' },
-    { id: 'proyectos', label: 'Proyectos', icon: '🚀' }
+    { id: 'proyectos', label: 'Proyectos', icon: '🚀' },
+    { id: 'habilidades', label: 'Habilidades', icon: '⚙️' }
   ];
 
   return (

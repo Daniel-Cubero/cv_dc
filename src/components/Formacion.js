@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import InfoCard from './InfoCard';
-import { CV_DATA } from '../data/cvData';
+import { CV_DATA } from '../data/cvDataDani';
 
 const Formacion = () => {
   const [subTab, setSubTab] = useState('universitaria');
@@ -48,7 +48,7 @@ const Formacion = () => {
             <InfoCard key={i} title={item.titulo} subtitle={item.centro} footer={item.año} />
           ))
         ) : (
-          CV_DATA.formacion.cursos[cursoTab]?.map((item, i) => (
+          CV_DATA.formacion.cursos[cursoTab]?.sort((a, b) => Number(b.año) - Number(a.año)).map((item, i) => (
             <InfoCard key={i} title={item.titulo} subtitle={item.centro} footer={item.año} />
           ))
         )}

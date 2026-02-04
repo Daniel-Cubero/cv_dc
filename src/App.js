@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { CV_DATA } from './data/cvData';
+import { CV_DATA } from './data/cvDataDani';
 import Header from './components/Layout/Header';
 import Navbar from './components/Layout/Navbar';
 import Formacion from './components/Formacion';
 import Proyectos from './components/Proyectos';
 import Experiencia from './components/Experiencia';
 import Modal from './components/Modal'
+import Habilidades from './components/Habilidades';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState(null);
@@ -36,6 +37,7 @@ const App = () => {
           {activeTab === 'formacion' && <Formacion onSelect={setSelectedItem} />}
           {activeTab === 'experiencia' && <Experiencia onSelect={setSelectedItem} />}
           {activeTab === 'proyectos' && <Proyectos onSelect={setSelectedItem} />}
+          {activeTab === 'habilidades' && <Habilidades />}
         </main>
       )}
 
